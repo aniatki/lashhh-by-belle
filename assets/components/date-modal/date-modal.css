@@ -1,0 +1,84 @@
+.date-modal {
+    background-color: var(--clr-neutral-100);
+    padding: 1rem;
+    font-weight: bold;
+    font-family: "Mukta", sans-serif;
+    color: var(--clr-neutral-900);
+    font-size: 1.25rem;
+    user-select: none;
+}
+
+.close-modal-btn {
+    background: none;
+    color: var(--clr-accent-400);
+    font-size: 4rem;
+    border: none;
+    display: inline-block;
+    line-height: 0.6;
+    width: 100%;
+    text-align: end;
+    cursor: pointer;
+}
+
+.unavailable {
+    color: rgb(161, 161, 161);
+    background: none;
+    pointer-events: none;
+}
+
+.individual-container {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+}
+
+label {
+    cursor: pointer;
+}
+
+.individual-container > div > label {
+    display: block;
+}
+
+.date {
+    grid-column: span 4;
+}
+.hour {
+    grid-column: 5;
+}
+.minute {
+    grid-column: 6;
+}
+
+.date-container,
+.hour-container,
+.minute-container {
+    margin: 0.25rem;
+    padding: 0.75rem;
+}
+
+.hour-container,
+.minute-container {
+    text-align: center;
+}
+.minute-container {
+    text-align: center;
+}
+
+.date-time-active {
+    background-color: var(--clr-accent-400);
+    color: var(--clr-neutral-100);
+}
+
+.confirm {
+    width: 100%;
+    padding: 0.25rem;
+    text-transform: uppercase;
+    color: var(--clr-accent-400);
+    font-size: 1.5rem;
+    background: none;
+    cursor: pointer;
+    border: none;
+    font-weight: 600;
+    border-bottom: 3px solid var(--clr-accent-400);
+    grid-column: 1/-1;
+}

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;1,600&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Parisienne&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="date-modal.css">
+    <link rel="stylesheet" href="../../general/general-style.css">
+    <script src="date-modal.js" defer></script>
+</head>
+
+<body>
+    <div class="date-modal">
+        <button class="close-modal-btn">&times;</button>
+        <div class="individual-container">
+            <div class="date">
+                <label class="date-container date-time-active" for="date">
+                    <input type="radio" name="date" hidden>
+                </label>
+                <label class="date-container" for="date">
+                    <input type="radio" name="date" checked hidden>
+                </label>
+                <label class="date-container" for="date">
+                    <input type="radio" name="date" hidden>
+                </label>
+                <label class="date-container" for="date">
+                    <input type="radio" name="date" hidden>
+                </label>
+                <label class="date-container" for="date">
+                    <input type="radio" name="date" hidden>
+                </label>
+            </div>
+
+            <div class="hour">
+                <label class="hour-container date-time-active" for="hour">
+                    <input type="radio" name="hour" hidden>
+                </label>
+                <label class="hour-container" for="hour">
+                    <input type="radio" name="hour" hidden>
+                </label>
+                <label class="hour-container" for="hour">
+                    <input type="radio" name="hour" hidden>
+                </label>
+                <label class="hour-container" for="hour">
+                    <input type="radio" name="hour" hidden>
+                </label>
+                <label class="hour-container" for="hour">
+                    <input type="radio" name="hour" hidden>
+                </label>
+            </div>
+            <div class="minute">
+                <label class="minute-container date-time-active" for="minute">
+                    <input type="radio" name="minute" hidden>
+                </label>
+                <label class="minute-container" for="minute">
+                    <input type="radio" name="minute" hidden>
+                </label>
+                <label class="minute-container" for="minute">
+                    <input type="radio" name="minute" hidden>
+                </label>
+                <label class="minute-container" for="minute">
+                    <input type="radio" name="minute" hidden>
+                </label>
+                <label class="minute-container" for="minute">
+                    <input type="radio" name="minute" hidden>
+                </label>
+            </div>
+            <button class="confirm">
+                Confirm Booking
+            </button>
+        </div>
+    </div>
+</body>
+
+</html>
