@@ -1,0 +1,114 @@
+:root {
+    --clr-neutral-100: #e5ceb3;
+    --clr-neutral-300: #c1a4aa;
+    --clr-primary-400: #d7284b;
+    --clr-accent-400: #603bb0;
+    --clr-neutral-900: #1e1517;
+}
+
+*::before,
+*::after,
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    background-color: var(--clr-neutral-900);
+}
+
+.product-container {
+    width: 16em;
+    aspect-ratio: 1;
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(10, 1fr);
+    cursor: pointer;
+}
+
+.product-container:hover .product-title {
+    transform: translateX(0.75em);
+}
+
+.product-container:hover .arrow {
+    transform: translateX(-1.5em);
+}
+
+.product-container img {
+    width: 100%;
+    object-fit: cover;
+    grid-column: 1/-1;
+    grid-row: 1/-1;
+    filter: saturate(0.1);
+    transition: filter 200ms;
+}
+
+.product-container:hover > img {
+    filter: saturate(0.9);
+}
+.price-from,
+.product-title {
+    color: var(--clr-primary-400);
+    z-index: 2;
+    padding: 0.5em;
+}
+
+.product-title,
+.arrow {
+    transition: transform 200ms ease-out;
+}
+
+.price-from {
+    text-align: end;
+    font-family: "Mukta", sans-serif;
+    font-size: 0.75rem;
+    font-weight: 800;
+    grid-column: 8/-1;
+    grid-row: 1;
+    line-height: 1.2;
+}
+
+.product-title {
+    font-size: 3rem;
+    font-family: "Playfair Display", serif;
+    font-weight: medium;
+    grid-column: 1/4;
+    grid-row: 6/-1;
+    text-transform: uppercase;
+    line-height: 0.9;
+    margin-inline-start: -1em;
+}
+
+.arrow {
+    --arrow-width: 3px;
+    height: var(--arrow-width);
+    aspect-ratio: 58 / 4;
+    background-color: var(--clr-primary-400);
+    position: relative;
+    border-top-right-radius: 100vw;
+    border-bottom-right-radius: 100vw;
+    grid-column: 10/12;
+    grid-row: 10;
+}
+
+.arrow::before,
+.arrow::after {
+    content: "";
+    position: absolute;
+    height: var(--arrow-width);
+    aspect-ratio: 100 / 21;
+    background-color: var(--clr-primary-400);
+    right: calc(-1 * var(--arrow-width));
+    transform-origin: right;
+}
+
+.arrow::before {
+    transform: rotate(45deg) translateY(1px);
+}
+.arrow::after {
+    transform: rotate(-45deg) translateY(-1px);
+}
