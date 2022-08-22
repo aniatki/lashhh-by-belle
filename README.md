@@ -1,4 +1,4 @@
-<a href="https://www.figma.com/file/DCyasEsd4xqWQGmgyDCJ4u/Lashhh-by-Belle?node-id=0%3A1" aria-label="View the figma design for this project. Opens in new tab." rel="noopener" target="_blank">Figma Project</a>
+<a href="https://www.figma.com/file/DCyasEsd4xqWQGmgyDCJ4u/Lashhh-by-Belle?node-id=0%3A1" aria-label="View the figma design for this project." target="_blank">Figma Project</a>
 
 # Lashhh by Belle - A booking system for a lash extension salon.
 
