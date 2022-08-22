@@ -1,9 +1,9 @@
 :root {
-    --clr-neutral-100: #e5ceb3;
-    --clr-neutral-300: #c1a4aa;
-    --clr-primary-400: #d7284b;
-    --clr-accent-400: #603bb0;
-    --clr-neutral-900: #1e1517;
+    --clr-neutral-100: hsl(32, 49%, 80%);
+    --clr-neutral-300: hsl(348, 19%, 70%);
+    --clr-primary-400: hsl(348, 69%, 50%);
+    --clr-accent-400: hsl(259, 50%, 46%);
+    --clr-neutral-900: hsl(347, 18%, 10%);
 }
 
 *::before,
@@ -28,6 +28,23 @@ body {
     grid-template-columns: repeat(10, 1fr);
     grid-template-rows: repeat(10, 1fr);
     cursor: pointer;
+    position: relative;
+}
+
+.product-container::after {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 50%;
+    z-index: 1;
+    content: '';
+    transform: scale(.40) translate(-100%, 180%);
+    background-color: var(--clr-accent-400);
+    transition: transform 400ms ease;
+}
+
+.product-container:hover::after {
+    transform: scale(.3) translate(130%, 440%);
 }
 
 .product-container:hover .product-title {
@@ -60,6 +77,7 @@ body {
 .product-title,
 .arrow {
     transition: transform 200ms ease-out;
+    z-index: 2;
 }
 
 .price-from {
