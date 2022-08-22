@@ -55,6 +55,7 @@ const hourElements = document.querySelectorAll(".hour-container")
 const minuteElements = document.querySelectorAll(".minute-container")
 
 for (let i = 0; i < dates.length; i++) {
+    if (hours[i] > MAX_HOUR) hours[i] = hours[i] - hours[i] + MIN_HOUR
     dateElements[i].innerText = dates[i]
     hourElements[i].innerText = hours[i]
     minuteElements[i].innerText = Math.floor(minuteNow)
@@ -67,21 +68,27 @@ for (let i = 0; i < dates.length; i++) {
 
     Math.floor((minuteNow += 5))
     if (minuteNow > MAX_MINUTE) minuteNow = MIN_MINUTE
+    if (hours[i] > MAX_HOUR) minuteNow = MIN_MINUTE
 }
+
+const unavailableElements = document.querySelectorAll(".unavailable")
+unavailableElements.forEach((elem) => elem.classList.remove("date-time-active"))
 
 dateElements.forEach((elem) => {
     elem.addEventListener("click", (e) => {
-        const clicked = e.target.children
+        const clicked = e.target.innerHTML
         console.log(clicked)
     })
 })
 hourElements.forEach((elem) => {
     elem.addEventListener("click", (e) => {
-        // console.log(e.target)
+        const clicked = e.target.innerHTML
+        console.log(clicked)
     })
 })
 minuteElements.forEach((elem) => {
     elem.addEventListener("click", (e) => {
-        // console.log(e.target)
+        const clicked = e.target.innerHTML
+        console.log(clicked)
     })
 })

@@ -1,3 +1,7 @@
+body {
+    position: relative;
+}
+
 .date-modal {
     background-color: var(--clr-neutral-100);
     padding: 1rem;
@@ -8,10 +12,19 @@
     user-select: none;
 }
 
+.date-modal::after {
+    position: absolute;
+    content: "";
+    inset: 0;
+    background-color: rgba(0 0 0 / 0.3);
+    backdrop-filter: blur(4em);
+    z-index: -1;
+}
+
 .close-modal-btn {
     background: none;
-    color: var(--clr-accent-400);
-    font-size: 4rem;
+    color: var(--clr-primary-400);
+    font-size: 3rem;
     border: none;
     display: inline-block;
     line-height: 0.6;
@@ -33,6 +46,7 @@
 
 label {
     cursor: pointer;
+    padding-inline: 0.5rem;
 }
 
 .individual-container > div > label {
@@ -53,7 +67,6 @@ label {
 .hour-container,
 .minute-container {
     margin: 0.25rem;
-    padding: 0.75rem;
 }
 
 .hour-container,
@@ -71,14 +84,14 @@ label {
 
 .confirm {
     width: 100%;
-    padding: 0.25rem;
-    text-transform: uppercase;
     color: var(--clr-accent-400);
-    font-size: 1.5rem;
-    background: none;
+    font-size: 1rem;
+    background: var(--clr-neutral-300);
+    padding-block: 0.75rem;
     cursor: pointer;
     border: none;
     font-weight: 600;
-    border-bottom: 3px solid var(--clr-accent-400);
+    /* border-bottom: 3px solid var(--clr-accent-400); */
     grid-column: 1/-1;
+    margin-block-start: 1rem;
 }
