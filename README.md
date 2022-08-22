@@ -1,10 +1,10 @@
-### Lashhh by Belle - A booking system for a lash extension salon.
+# Lashhh by Belle - A booking system for a lash extension salon.
 
-## End user's goal:
+### End user's goal:
 
 Be able to make booking appointments and receive information back about prices, packages, quotas etc.
 
-## Site/business owner's goals:
+### Site/business owner's goals:
 
 Make sure no duplicate appointments are made, have a clear and concise booking system, and be able to give the user as much information and hospitality as possible.
 
