@@ -15,8 +15,255 @@
 }
 
 body {
-    min-height: 100vh;
     display: grid;
-    place-items: center;
     background-color: var(--clr-neutral-900);
+}
+
+.container {
+    position: relative;
+    width: clamp(320px, 100%, 60em);
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+/* Nav */
+
+nav {
+    position: fixed;
+    top: 0;
+    height: 5rem;
+}
+
+/* Logo styles */
+
+.logo {
+    max-width: min-content;
+    height: 100%;
+    position: relative;
+    margin: 0.75rem 0;
+}
+
+.lashhh {
+    font-family: "Mukta", sans-serif;
+    text-transform: uppercase;
+    color: var(--clr-accent-400);
+    font-size: 1.5rem;
+    position: absolute;
+    top: -0.25em;
+}
+.by {
+    color: var(--clr-neutral-100);
+    font-family: "Playfair Display", serif;
+    font-size: 0.6rem;
+    position: absolute;
+    top: 2em;
+    left: 4em;
+}
+.belle {
+    font-family: "Parisienne", script;
+    color: var(--clr-primary-400);
+    font-size: 2.25rem;
+    position: absolute;
+    bottom: 20%;
+}
+
+/* Nav Hamburger Sign Up Button Wrapper */
+
+.hamburger-sign-up-wrap {
+    display: flex;
+    align-items: flex-start;
+    position: absolute;
+    top: 0;
+}
+
+nav .sign-up {
+    display: inline-block;
+    min-width: max-content;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    border: none;
+    font-weight: bold;
+    background-color: var(--clr-primary-400);
+    color: var(--clr-neutral-100);
+    margin-top: 1.5rem;
+    padding-inline: 0.5rem;
+    cursor: pointer;
+    margin-left: 7rem;
+}
+
+/* Hamburger Menu */
+
+.hamburger-menu {
+    width: clamp(320px, 100%, 60em);
+    height: 100vh;
+    display: grid;
+    font-family: "Playfair Display", serif;
+    margin-inline: -50%;
+    z-index: 100;
+}
+
+label {
+    grid-column: 5;
+    grid-row: 1;
+    z-index: 999;
+}
+
+svg {
+    display: block;
+    margin-left: auto;
+    margin-top: 1rem;
+    margin-right: 1rem;
+
+    fill: var(--clr-accent-400);
+    transition: transform 400ms cubic-bezier(1, -0.03, 0.28, 0.99),
+        fill 400ms ease;
+    cursor: pointer;
+}
+
+input {
+    transform: scale(0);
+    visibility: hidden;
+}
+
+input:not(:checked) ~ ul {
+    transform: translateX(250%);
+}
+
+input:checked ~ label > svg {
+    fill: var(--clr-neutral-100);
+    transform: rotate(180deg);
+}
+
+input:checked ~ ul {
+    transform: translate(0);
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+
+    font-size: 3rem;
+    font-weight: bold;
+
+    width: 100%;
+    height: 100%;
+
+    display: grid;
+    place-content: center;
+    text-align: end;
+
+    grid-column: 1/6;
+    grid-row: 1/6;
+
+    transition: transform 400ms cubic-bezier(1, -0.03, 0.28, 0.99);
+
+    background-color: var(--clr-accent-400);
+}
+
+ul li {
+    margin-block: 1rem;
+}
+
+a {
+    text-decoration: none;
+    color: var(--clr-neutral-100);
+}
+
+a.active {
+    color: var(--clr-primary-400);
+}
+
+/* Main heading styles */
+
+h1 {
+    font-family: "Playfair Display", serif;
+    color: var(--clr-neutral-300);
+    font-size: 4.75rem;
+    margin-block-start: 4rem;
+    line-height: 1.1;
+}
+
+h1 .italic {
+    font-style: italic;
+}
+
+h1 .primary {
+    color: var(--clr-primary-400);
+}
+
+h1 .accent {
+    color: var(--clr-accent-400);
+}
+
+.headline-p {
+    font-size: 1.5rem;
+    color: var(--clr-neutral-100);
+    margin-block: 1rem;
+    font-family: "Mukta", sans-serif;
+    font-weight: lighter;
+}
+
+/* Call to action */
+
+.primary-button {
+    margin-top: 1rem;
+    font-family: "Mukta", sans-serif;
+    font-size: 1.5rem;
+    color: var(--clr-neutral-300);
+    border: none;
+    font-weight: bold;
+    width: 75%;
+    background-color: transparent;
+    position: relative;
+    padding-block: 0.5rem;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.primary-button::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    outline: 0.25rem solid var(--clr-primary-400);
+    z-index: -1;
+    transform: scaleX(0.75);
+    transform-origin: left;
+    transition: transform 350ms cubic-bezier(0.83, -0.47, 0.53, 1.37);
+}
+
+.primary-button:hover::before {
+    transform: scaleX(1) translateX(4rem);
+}
+
+.tap-change {
+    width: 20%;
+    display: inline-block;
+    position: relative;
+    padding-top: 1rem;
+    z-index: -1;
+}
+
+.tap-to-change {
+    position: absolute;
+    top: -0.75rem;
+    display: inline-block;
+    color: var(--clr-neutral-300);
+    font-family: "Mukta", sans-serif;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    text-align: right;
+}
+
+.tap-change > svg {
+    position: absolute;
+    top: -0.75rem;
+    right: 40%;
+}
+.tap-change > svg > path {
+    fill: var(--clr-neutral-300);
+}
+
+.primary-button:hover svg {
+    transform: translateX(-2em);
 }

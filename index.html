@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;1,600&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Parisienne&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/index.css">
+    <style>
+        @media (min-width: 20em) {
+            .hamburger-menu {
+                transform: translateX(10%)
+            }
+        }
+
+        @media (min-width: 40em) {
+            .hamburger-menu {
+                transform: translateX(60%)
+            }
+        }
+
+        @media (min-width: 60em) {
+            .hamburger-menu {
+                transform: translateX(100%)
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <nav>
+                <div class="logo">
+                    <span class="lashhh">Lashhh</span>
+                    <span class="by">by</span>
+                    <span class="belle">Belle</span>
+                </div>
+                <div class="hamburger-sign-up-wrap">
+                    <button class="sign-up">Sign Up</button>
+                    <div class="hamburger-menu open">
+                        <input type="checkbox" name="menu" id="menu">
+                        <label for="menu" onclick="document.querySelector('.hamburger-menu').classList.toggle('open')">
+                            <svg width="40" height="40" viewBox="0 0 40 40" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M5 30H25V26.6667H5V30ZM5 10V13.3333H35V10H5ZM5 21.6667H35V18.3333H5V21.6667Z" />
+                            </svg>
+                        </label>
+                        <ul>
+                            <li><a class="active" href="">Home</a></li>
+                            <li><a href="">Catalogue</a></li>
+                            <li><a href="">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <main>
+            <h1><span class="italic">Fancy</span> getting your <span class="primary">lashes</span> <span
+                    class="accent">done?</span></h1>
+            <p class="headline-p">Choose a time & date when you're available and we'll do the rest!</p>
+
+            <div class="cta">
+                <button class="primary-button">
+                    Thursday, 1:40 PM
+                </button>
+                <div class="tap-change">
+                    <svg width="85" height="8" viewBox="0 0 85 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M0.646446 3.64645C0.451187 3.84171 0.451187 4.15829 0.646446 4.35355L3.82843 7.53553C4.02369 7.7308 4.34027 7.7308 4.53554 7.53553C4.7308 7.34027 4.7308 7.02369 4.53554 6.82843L1.70711 4L4.53554 1.17157C4.7308 0.976311 4.7308 0.659728 4.53554 0.464466C4.34027 0.269204 4.02369 0.269204 3.82843 0.464466L0.646446 3.64645ZM85 3.5L1 3.5V4.5L85 4.5V3.5Z"
+                            fill="#C1A4AA" />
+                    </svg>
+                    <span class="tap-to-change">
+                        Tap to <br> change
+                    </span>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script>
+        const btn = document.querySelector('.tap-change')
+        const input = document.getElementById('menu')
+        if (input.checked) {
+            btn.style.opacity = 0
+        } 
+    </script>
+</body>
+
+</html>
