@@ -41,7 +41,7 @@ h3 {
     transition: filter calc(var(--speed) / 2.5) var(--curve);
 }
 
-:where(.sign-up, label > svg, a):hover {
+:where(.sign-up, label > svg, a, .app-buttons > button):hover:not(.disabled) {
     filter: brightness(0.85);
 }
 
@@ -170,6 +170,7 @@ main {
     border: none;
     align-self: center;
 
+    text-decoration: none;
     text-transform: uppercase;
     font-weight: bold;
     font-family: var(--ff-sans-serif);
@@ -679,7 +680,8 @@ main {
     color: var(--clr-neutral-900);
 }
 
-.sign-up-section h1 {
+.sign-up-section h1,
+.log-in-section h1 {
     grid-column: 1/-1;
     text-align: center;
     font-size: 3.5rem;
@@ -731,7 +733,8 @@ form p {
     outline-color: var(--clr-primary-400);
 }
 
-.sign-up-section button {
+.sign-up-section button,
+.log-in-section button {
     font-size: 1.125rem;
     display: inline-block;
     width: 100%;
@@ -746,8 +749,91 @@ form p {
     cursor: pointer;
 }
 
+.log-in-section button:hover,
 .sign-up-section button:hover {
     filter: brightness(1.6);
+}
+
+/* Dashboard */
+
+.dashboard {
+    background-color: var(--clr-neutral-100);
+    color: var(--clr-neutral-900);
+}
+
+.dashboard-user-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.user {
+    font-size: 2rem;
+}
+
+.app-item {
+    margin-block-end: 1rem;
+    border-bottom: 2px solid var(--clr-neutral-300);
+    padding-block: 1.5rem;
+}
+
+.appointment {
+    display: flex;
+    justify-content: space-between;
+}
+
+.details {
+    font-weight: bold;
+    margin-block: 0.5rem;
+    margin-inline: 0.5rem;
+}
+
+.app-date {
+    margin-inline-start: 0;
+}
+
+.app-length {
+    margin-right: auto;
+}
+
+.package {
+    margin-block: 0.5rem;
+}
+
+.app-buttons {
+    display: flex;
+    justify-content: stretch;
+}
+
+.app-buttons > * {
+    width: 100%;
+    padding-block: 0.5rem;
+    font-weight: bold;
+    border: none;
+    text-align: center;
+}
+
+.app-price {
+    background-color: var(--clr-neutral-900);
+    color: var(--clr-neutral-100);
+}
+
+.app-book {
+    background-color: var(--clr-accent-400);
+    color: white;
+    margin-inline: 0.5rem;
+    cursor: pointer;
+}
+
+.app-cancel {
+    color: white;
+    background-color: var(--clr-primary-400);
+    cursor: pointer;
+}
+
+.disabled {
+    background-color: var(--clr-neutral-300);
+    font-weight: normal;
 }
 
 /* Media Queries */
