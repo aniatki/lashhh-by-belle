@@ -1,11 +1,10 @@
 :root {
-    --clr-neutral-100: hsl(32, 49%, 80%);
-    --clr-neutral-100-alpha: hsla(32, 49%, 80%, 0.5);
-    --clr-neutral-300: hsl(348, 19%, 70%);
-    --clr-primary-400: hsl(348, 69%, 50%);
-    --clr-accent-400: hsl(259, 50%, 46%);
-    --clr-accent-400-alpha: hsla(259, 50%, 46%, 0.95);
-    --clr-neutral-900: hsl(347, 18%, 10%);
+    --clr-neutral-100: hsla(32, 16%, 94%, 1);
+    --clr-neutral-100-alpha: hsla(32, 16%, 94%, 0.5);
+    --clr-neutral-300: hsla(348, 41%, 92%, 1);
+    --clr-primary-400: hsla(335, 100%, 55%, 1);
+    --clr-accent-400: hsla(270, 93%, 59%, 1);
+    --clr-neutral-900: hsl(348, 8%, 13%);
 
     --ff-serif: "Playfair Display", serif;
     --ff-sans-serif: "Mukta", sans-serif;
