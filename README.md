@@ -14,4 +14,4 @@ The site needs to show the elegance of the business, and and the same time be ex
 
 ### Initial app preview on mobile devices pictured below:
 
-<img src="/assets/iPhone 13 Pro Max - 1.png" alt="Lashhh by Belle Landing Page Design">
+<img src="../lashhh-by-belle/assets/iPhone 13 Pro Max - 1.png" alt="Lashhh by Belle Landing Page Design">
