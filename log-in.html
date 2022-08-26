@@ -16,7 +16,7 @@
 </head>
 
 <body>
-    <div class="grid-container dashboard">
+    <div class="grid-container sign-up-page">
         <header>
             <div class="logo">
                 <span class="lashhh">Lashhh</span>
@@ -38,22 +38,16 @@
                         <li><a href="./">Home</a></li>
                         <li><a href="#">Catalogue</a></li>
                         <li><a href="#">About</a></li>
-                        <li><a href="log-in.html">Log in</a></li>
+                        <li><a class="active" href="#">Log in</a></li>
                     </ul>
                 </div>
             </div>
         </header>
 
-        <main class="sign-up-section">
-            <h1>Sign up</h1>
+        <main class="log-in-section">
+            <h1>Log in</h1>
 
             <form action="" method="POST">
-                <div class="form-field">
-                    <label for="full-name">
-                        Full name:
-                    </label>
-                    <input type="text" name="full-name" id="full-name">
-                </div>
                 <div class="form-field">
                     <label for="email">
                         E-mail:
@@ -63,18 +57,10 @@
                 <div class="form-field">
                     <label for="password">
                         Password:
-                        <span>
-                            Must be longer than 8 characters and include at least one uppercase and one lowercase
-                            letter.
-                        </span>
                     </label>
                     <input type="password" name="password" id="password">
                 </div>
-                <p>
-                    By signing up for an account, you agree to our <span class="accent">terms and conditions</span>. The
-                    information from this form is 100% compliant with European Union's GDPR rules.
-                </p>
-                <button type="submit">Confirm</button>
+                <button type="submit">Log in</button>
             </form>
 
         </main>

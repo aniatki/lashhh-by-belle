@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;1,600&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Parisienne&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/index.css">
+    <title>Lashhh by Belle | Lash Extensions</title>
+    <style>
+        .date-time-modal {
+            background-color: var(--clr-neutral-100);
+            padding: 1rem .5rem;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        }
+
+        .date-time-modal::after {
+            inset: -20vw;
+            content: '';
+            position: absolute;
+            z-index: -2;
+            background-color: rgba(0, 0, 0, .2);
+        }
+
+        .date-time-modal button {
+            font-size: 1.25rem;
+            padding-inline: .25rem;
+            background-color: transparent;
+            border: none;
+            color: var(--clr-primary-400);
+            max-width: max-content;
+            align-self: flex-end;
+        }
+
+        .date-time-modal input {
+            padding-block: .25rem;
+            margin-block: .5rem;
+            font-size: 1.5rem;
+        }
+
+        .date-time-modal .modal-confirm-btn {
+            min-width: 100%;
+            text-align: center;
+            font-weight: bold;
+            font-size: 1rem;
+            color: var(--clr-accent-400);
+            text-decoration: underline;
+            margin-block: .5rem;
+        }
+    </style>
+</head>
+
+<body style="background: white; color: black; display: grid; place-content: center; min-height: 100vh;">
+    <div class="date-time-modal">
+        <button>&times;</button>
+        <input type="date" name="" id="">
+        <input type="time" name="" id="">
+        <button class="modal-confirm-btn">Confirm</button>
+    </div>
+</body>
+
+</html>
