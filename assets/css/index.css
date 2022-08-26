@@ -258,6 +258,10 @@ main {
     font-family: var(--ff-serif);
 }
 
+.ul-nav-links a.active {
+    color: var(--clr-primary-400);
+}
+
 /* Hero section styles */
 
 .main-heading {
@@ -604,6 +608,7 @@ main {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
+    margin-block-end: 2rem;
 }
 
 .newsletter label {
@@ -644,6 +649,108 @@ main {
 .newsletter button:hover {
     filter: brightness(0.85);
 }
+
+/* Sign-up page */
+
+.back {
+    font-family: var(--ff-sans-serif);
+    color: inherit;
+    font-size: 1.5rem;
+    display: inline-block;
+    align-self: center;
+    justify-content: flex-start;
+    text-decoration: none;
+    position: relative;
+    margin-inline: auto;
+}
+
+.back::after {
+    content: "";
+    position: absolute;
+    bottom: 5px;
+    left: 0;
+    width: 100%;
+    background-color: var(--clr-neutral-900);
+    height: 2px;
+}
+
+.sign-up-page {
+    background-color: var(--clr-neutral-300);
+    color: var(--clr-neutral-900);
+}
+
+.sign-up-section h1 {
+    grid-column: 1/-1;
+    text-align: center;
+    font-size: 3.5rem;
+    margin-block-end: 1.25rem;
+}
+
+.form-field {
+    grid-column: 1/-1;
+    margin-block: 1.25rem;
+}
+
+.form-field label,
+.form-field input {
+    display: block;
+    width: 100%;
+}
+
+.form-field label,
+.form-field input,
+form p {
+    font-family: var(--ff-sans-serif);
+}
+
+.form-field label {
+    color: var(--clr-neutral-900);
+    font-weight: bold;
+    font-size: 1.25rem;
+    margin-block: 1rem;
+}
+
+.form-field label span,
+form p {
+    display: block;
+    font-weight: bold;
+    font-size: 0.8rem;
+    opacity: 0.7;
+    margin-block: 0.25rem;
+    line-height: 1.7;
+}
+
+.form-field input {
+    background: none;
+    font-size: 1.75rem;
+    border: 0.125em solid var(--clr-neutral-900);
+    padding: 0.25rem 0.25rem;
+}
+
+.form-field input:focus {
+    outline-color: var(--clr-primary-400);
+}
+
+.sign-up-section button {
+    font-size: 1.125rem;
+    display: inline-block;
+    width: 100%;
+    margin-block-start: 0.5rem;
+    margin-block-end: 5rem;
+    text-transform: uppercase;
+    padding: 1.25rem;
+    font-weight: bold;
+    color: var(--clr-neutral-100);
+    background-color: var(--clr-neutral-900);
+    border: none;
+    cursor: pointer;
+}
+
+.sign-up-section button:hover {
+    filter: brightness(1.6);
+}
+
+/* Media Queries */
 
 @media screen and (min-width: 20em) {
     :root {
