@@ -126,6 +126,10 @@ main {
     grid-column: 1/-1;
 }
 
+.date-time-modal {
+    grid-column: 1/-1;
+}
+
 /* Detail */
 
 /* Logo styles */
@@ -651,6 +655,64 @@ main {
     filter: brightness(0.85);
 }
 
+/* Modal */
+
+.date-time-modal {
+    background-color: var(--clr-neutral-100);
+    padding: 1rem 1rem 2rem 1rem;
+    margin-inline: auto;
+    width: 100%;
+    top: 30vh;
+}
+
+.date-time-modal::backdrop {
+    background-color: rgba(0 0 0 / 0.5);
+    backdrop-filter: blur(0.1em);
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.modal-header label {
+    color: var(--clr-neutral-900);
+}
+
+.date-time-modal button,
+.date-time-modal .modal-confirm-btn {
+    font-size: 2rem;
+    padding-inline: 0.25rem;
+    background-color: transparent;
+    border: none;
+    color: var(--clr-primary-400);
+    max-width: max-content;
+    align-self: flex-end;
+    cursor: pointer;
+}
+
+.date-time-modal input {
+    width: 100%;
+    padding-block: 0.25rem;
+    padding-inline: 0.5rem;
+    margin-block: 0.5rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    background: transparent;
+    border: 0.25rem solid var(--clr-primary-400);
+}
+
+.date-time-modal .modal-confirm-btn {
+    min-width: 100%;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1rem;
+    color: var(--clr-accent-400);
+    text-decoration: underline;
+    margin-block: 0.5rem;
+}
+
 /* Sign-up page */
 
 .back {
@@ -678,6 +740,7 @@ main {
 .sign-up-page {
     background-color: var(--clr-neutral-300);
     color: var(--clr-neutral-900);
+    min-height: 100vh;
 }
 
 .sign-up-section h1,
@@ -758,6 +821,7 @@ form p {
 
 .dashboard {
     background-color: var(--clr-neutral-100);
+    min-height: 100vh;
     color: var(--clr-neutral-900);
 }
 

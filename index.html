@@ -12,6 +12,7 @@
         rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Parisienne&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/index.css">
+    <script src="/assets/scripts/modal.js" defer></script>
     <title>Lashhh by Belle | Lash Extensions</title>
 </head>
 
@@ -187,6 +188,17 @@
 
         <footer></footer>
     </div>
+
+    <dialog class="date-time-modal">
+        <form method="dialog">
+            <div class="modal-header">
+                <label for="date-time">Book appointment</label>
+                <button>&times;</button>
+            </div>
+            <input type="datetime-local" name="date-time" id="date-time-input">
+            <button class="modal-confirm-btn" type="submit">Confirm</button>
+        </form>
+    </dialog>
 </body>
 
 </html>
