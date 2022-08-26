@@ -2,7 +2,9 @@
 <html lang="en">
 
 <head>
-    <title>Document</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400;700;800&display=swap" rel="stylesheet">
@@ -10,85 +12,180 @@
         rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Parisienne&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/index.css">
-    <style>
-        @media (min-width: 20em) {
-            .hamburger-menu {
-                transform: translateX(10%)
-            }
-        }
-
-        @media (min-width: 40em) {
-            .hamburger-menu {
-                transform: translateX(60%)
-            }
-        }
-
-        @media (min-width: 60em) {
-            .hamburger-menu {
-                transform: translateX(100%)
-            }
-        }
-    </style>
+    <title>Lashhh by Belle | Lash Extensions</title>
 </head>
 
 <body>
-    <div class="container">
+    <div class="grid-container">
         <header>
-            <nav>
-                <div class="logo">
-                    <span class="lashhh">Lashhh</span>
-                    <span class="by">by</span>
-                    <span class="belle">Belle</span>
-                </div>
-                <div class="hamburger-sign-up-wrap">
-                    <button class="sign-up">Sign Up</button>
-                    <div class="hamburger-menu open">
-                        <input type="checkbox" name="menu" id="menu">
-                        <label for="menu" onclick="document.querySelector('.hamburger-menu').classList.toggle('open')">
-                            <svg width="40" height="40" viewBox="0 0 40 40" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M5 30H25V26.6667H5V30ZM5 10V13.3333H35V10H5ZM5 21.6667H35V18.3333H5V21.6667Z" />
-                            </svg>
-                        </label>
-                        <ul>
-                            <li><a class="active" href="">Home</a></li>
-                            <li><a href="">Catalogue</a></li>
-                            <li><a href="">Contact</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </nav>
-        </header>
-        <main>
-            <h1><span class="italic">Fancy</span> getting your <span class="primary">lashes</span> <span
-                    class="accent">done?</span></h1>
-            <p class="headline-p">Choose a time & date when you're available and we'll do the rest!</p>
+            <div class="logo">
+                <span class="lashhh">Lashhh</span>
+                <span class="by">by</span>
+                <span class="belle">Belle</span>
+            </div>
 
-            <div class="cta">
-                <button class="primary-button">
-                    Thursday, 1:40 PM
-                </button>
-                <div class="tap-change">
-                    <svg width="85" height="8" viewBox="0 0 85 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M0.646446 3.64645C0.451187 3.84171 0.451187 4.15829 0.646446 4.35355L3.82843 7.53553C4.02369 7.7308 4.34027 7.7308 4.53554 7.53553C4.7308 7.34027 4.7308 7.02369 4.53554 6.82843L1.70711 4L4.53554 1.17157C4.7308 0.976311 4.7308 0.659728 4.53554 0.464466C4.34027 0.269204 4.02369 0.269204 3.82843 0.464466L0.646446 3.64645ZM85 3.5L1 3.5V4.5L85 4.5V3.5Z"
-                            fill="#C1A4AA" />
-                    </svg>
-                    <span class="tap-to-change">
-                        Tap to <br> change
-                    </span>
+            <div class="right-side-menu">
+                <button class="sign-up">Sign Up</button>
+
+                <div class="hamburger-menu">
+                    <input type="checkbox" checked name="menu-toggle" id="menu-toggle">
+                    <label for="menu-toggle">
+                        <svg viewBox="0 0 30 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0 20H20V16.6667H0V20ZM0 0V3.33333H30V0H0ZM0 11.6667H30V8.33333H0V11.6667Z" />
+                        </svg>
+                    </label>
+                    <ul class="ul-nav-links">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Catalogue</a></li>
+                        <li><a href="#">About</a></li>
+                    </ul>
                 </div>
             </div>
+        </header>
+        <main>
+            <h1 class="main-heading"><em>Fancy</em> getting your <span class="primary">lashes</span> <span
+                    class="accent">done?</span></h1>
+            <svg class="big-arrow" viewBox="0 0 16 240" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M7.2929 239.707C7.68343 240.098 8.31659 240.098 8.70712 239.707L15.0711 233.343C15.4616 232.953 15.4616 232.319 15.0711 231.929C14.6806 231.538 14.0474 231.538 13.6569 231.929L8.00001 237.586L2.34316 231.929C1.95263 231.538 1.31947 231.538 0.928942 231.929C0.538418 232.319 0.538418 232.953 0.928942 233.343L7.2929 239.707ZM7 4.37114e-08L7.00001 239L9.00001 239L9 -4.37114e-08L7 4.37114e-08Z" />
+            </svg>
+
+            <p class="main-paragraph">Choose a time & date when you're available and we'll do the rest!</p>
+            <div class="cta-container">
+                <button class="primary-btn">Thursday, 1:40 PM</button>
+                <div class="btn-helper">
+                    <p>Tap to <br> Change</p>
+                    <svg viewBox="0 0 85 8" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M0.646446 3.64645C0.451187 3.84171 0.451187 4.15829 0.646446 4.35355L3.82843 7.53553C4.02369 7.7308 4.34027 7.7308 4.53554 7.53553C4.7308 7.34027 4.7308 7.02369 4.53554 6.82843L1.70711 4L4.53554 1.17157C4.7308 0.976311 4.7308 0.659728 4.53554 0.464466C4.34027 0.269204 4.02369 0.269204 3.82843 0.464466L0.646446 3.64645ZM85 3.5L1 3.5V4.5L85 4.5V3.5Z" />
+                    </svg>
+
+                </div>
+            </div>
+            <p class="heading-hint">Next available appointment from now. You can always change if it doesn't suit
+                your schedule.</p>
         </main>
+
+        <section class="catalogue">
+            <h2 class="catalogue-header  primary">Catalogue thing below</h2>
+            <div class="carousel snaps-inline">
+
+                <div class="product-container">
+                    <img src="http://picsum.photos/400" alt="Classic Lashes">
+                    <p class="price-from">from<br><span>€ 49.99</span></p>
+                    <h3 class="product-title">Classic Lashes</h3>
+                    <span class="arrow"></span>
+                </div>
+                <div class="product-container">
+                    <img src="http://picsum.photos/401" alt="Classic Lashes">
+                    <p class="price-from">from<br><span>€ 49.99</span></p>
+                    <h3 class="product-title">Classic Lashes</h3>
+                    <span class="arrow"></span>
+                </div>
+                <div class="product-container">
+                    <img src="http://picsum.photos/402" alt="Classic Lashes">
+                    <p class="price-from">from<br><span>€ 49.99</span></p>
+                    <h3 class="product-title">Classic Lashes</h3>
+                    <span class="arrow"></span>
+                </div>
+                <div class="product-container">
+                    <img src="http://picsum.photos/403" alt="Classic Lashes">
+                    <p class="price-from">from<br><span>€ 49.99</span></p>
+                    <h3 class="product-title">Classic Lashes</h3>
+                    <span class="arrow"></span>
+                </div>
+                <div class="product-container">
+                    <img src="http://picsum.photos/404" alt="Classic Lashes">
+                    <p class="price-from">from<br><span>€ 49.99</span></p>
+                    <h3 class="product-title">Classic Lashes</h3>
+                    <span class="arrow"></span>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="recommendation-sliders">
+            <p class="recommendation-description">
+                Before you go any further, we'd like to ask you some of your preferences about lashes for better
+                recommendations and your future self will thank you!
+            </p>
+            <div class="slider">
+                <label for="length-slider">
+                    <h2>Length slider:</h2>
+                </label>
+                <div class="slider-min-max-icons length">
+                    <svg class="slider-icons" width="14" height="14" viewBox="0 0 14 14" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1.02881 12.3695C3 4.49996 4 0.999756 13 0.999756" stroke="#C1A4AA" stroke-width="2"
+                            stroke-linecap="round" />
+                    </svg>
+                    <svg class="slider-icons" width="49" height="56" viewBox="0 0 49 56" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M2.55994 53.5721C-2.27195 32.4768 25.1873 23.1665 32.9655 23.1665C40.7438 23.1666 55.2394 24.2272 41.0973 10.0851C26.9551 -4.05708 14.2272 1.59974 25.5409 12.9134"
+                            stroke="#C1A4AA" stroke-width="3" stroke-linecap="round" />
+                    </svg>
+                </div>
+                <input type="range" name="length-slider" id="length-slider" min="1" step="1" max="10" value="1">
+            </div>
+
+            <div class="slider">
+                <label for="timeframe-slider">
+                    <h2>Timeframe slider:</h2>
+                </label>
+                <div class="slider-min-max-icons">
+                    <span class="range-classic">Classic</span>
+                    <span class="range-modern">Modern</span>
+                </div>
+                <input type="range" name="timeframe-slider" id="timeframe-slider" min="1" step="1" max="10" value="1">
+            </div>
+
+
+            <div class="slider">
+                <label for="thickness-slider">
+                    <h2>Thickness slider:</h2>
+                </label>
+                <div class="slider-min-max-icons">
+                    <svg class="slider-icons" width="28" height="23" viewBox="0 0 28 23" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1.02883 22.37C0.190461 3.44684 17.8461 0.312939 26.7787 1.11139" stroke="#C1A4AA"
+                            stroke-linecap="round" />
+                    </svg>
+                    <svg class="slider-icons" width="32" height="28" viewBox="0 0 32 28" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3.02883 24.37C2.19046 5.44684 19.8461 2.31294 28.7787 3.11139" stroke="#C1A4AA"
+                            stroke-width="6" stroke-linecap="round" />
+                    </svg>
+                </div>
+                <input type="range" name="thickness-slider" id="thickness-slider" min="1" step="1" max="10" value="1">
+            </div>
+
+            <div class="slider">
+                <label for="endurance-slider">
+                    <h2>Endurance slider:</h2>
+                </label>
+                <div class="slider-min-max-icons">
+                    <span class="range-omg">
+                        Omg, can't wait to take them off!
+                    </span>
+                    <span class="range-xmas">
+                        Yeah, I'm keeping them till Xmas
+                    </span>
+                </div>
+                <input type="range" name="endurance-slider" id="endurance-slider" min="1" step="1" max="10" value="1">
+            </div>
+        </section>
+
+        <section class="newsletter">
+            <label for="newsletter-email">
+                Subscribe to our newest offers and tips.
+            </label>
+            <input type="email" name="newsletter-email" id="newsletter-email" placeholder="email@example.ie">
+            <button>Sign up</button>
+        </section>
+
+        <footer></footer>
     </div>
-    <script>
-        const btn = document.querySelector('.tap-change')
-        const input = document.getElementById('menu')
-        if (input.checked) {
-            btn.style.opacity = 0
-        } 
-    </script>
 </body>
 
 </html>
