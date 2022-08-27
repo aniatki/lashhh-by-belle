@@ -4,7 +4,7 @@
     --clr-neutral-300: hsla(348, 41%, 92%, 1);
     --clr-primary-400: hsla(335, 100%, 55%, 1);
     --clr-accent-400: hsla(270, 93%, 59%, 1);
-    --clr-neutral-900: hsl(348, 8%, 13%);
+    --clr-neutral-900: hsl(348, 10%, 20%);
 
     --ff-serif: "Playfair Display", serif;
     --ff-sans-serif: "Mukta", sans-serif;
@@ -14,6 +14,8 @@
     --curve: cubic-bezier(1, 0, 0, 1);
 
     --width: clamp(20em, 100%, 60em);
+
+    scroll-behavior: smooth;
 }
 
 *::before,
@@ -23,6 +25,20 @@
     margin: 0;
     padding: 0;
 }
+
+/* Hover states for button and a tags */
+
+:where(button, label > svg, a) {
+    cursor: pointer;
+    transition: filter calc(var(--speed) / 2.5) var(--curve);
+}
+
+:where(.sign-up, label > svg, a, .app-buttons > button, .btn-pill, *
+        > button):hover:not(.disabled) {
+    filter: brightness(0.85);
+}
+
+/* General styles  */
 
 body {
     color: var(--clr-neutral-300);
@@ -36,14 +52,6 @@ h3 {
     font-family: var(--ff-serif);
 }
 
-:where(button, label > svg, a) {
-    transition: filter calc(var(--speed) / 2.5) var(--curve);
-}
-
-:where(.sign-up, label > svg, a, .app-buttons > button):hover:not(.disabled) {
-    filter: brightness(0.85);
-}
-
 /* Layout */
 
 .grid-container {
@@ -54,14 +62,15 @@ h3 {
     display: grid;
     grid-template-columns: repeat(8, 1fr);
     gap: 1em;
+    position: relative;
 }
 
 header {
-    grid-column: 1/-1;
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: center;
     z-index: 15;
+    max-height: 4rem;
 }
 
 .logo {
@@ -74,13 +83,11 @@ header {
 }
 
 main {
-    grid-column: 1/-1;
     display: grid;
     grid-template-columns: subgrid;
 }
 
 .main-heading {
-    grid-column: 1 / -1;
     grid-row: 1 / 2;
 }
 
@@ -95,41 +102,30 @@ main {
 }
 
 .main-paragraph {
-    grid-column: 1 / -1;
     grid-row: 2/3;
 }
 
 .cta-container {
     grid-row: 3;
-    grid-column: 1 / -1;
 }
 
 .heading-hint {
-    grid-column: 1/-1;
     grid-row: 4/6;
 }
 
-.catalogue {
-    grid-column: 1/-1;
-}
-
-.recommendation-sliders {
-    grid-column: 1/-1;
-}
-
-.slider {
-    grid-column: 1/-1;
-}
-
-.newsletter {
-    grid-column: 1/-1;
-}
-
-.date-time-modal {
-    grid-column: 1/-1;
-}
-
-.tips-and-reminders {
+main,
+header,
+.main-heading,
+.main-paragraph,
+.cta-container,
+.heading-hint,
+.catalogue,
+.recommendation-sliders,
+.slider,
+.newsletter,
+.date-time-modal,
+.tips-and-reminders,
+.admin-dashboard {
     grid-column: 1/-1;
 }
 
@@ -139,7 +135,7 @@ main {
 
 .logo {
     --logo-sizer: 0.4rem;
-    cursor: pointer;
+
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -185,7 +181,7 @@ main {
 
     background-color: var(--clr-primary-400);
     color: var(--clr-neutral-100);
-    cursor: pointer;
+
     padding-inline: 0.5rem;
     margin-inline-end: 0.5rem;
 }
@@ -201,7 +197,7 @@ main {
 .hamburger-menu label {
     justify-content: flex-end;
     display: flex;
-    cursor: pointer;
+
     z-index: 50;
 }
 
@@ -319,7 +315,6 @@ main {
     position: relative;
     padding: 0.25rem 3rem;
     z-index: 10;
-    cursor: pointer;
 }
 
 .primary-btn::after {
@@ -400,7 +395,7 @@ main {
     display: grid;
     grid-template-columns: repeat(10, 1fr);
     grid-template-rows: repeat(10, 1fr);
-    cursor: pointer;
+
     position: relative;
     user-select: none;
 }
@@ -651,7 +646,6 @@ main {
     padding: 0.475rem;
     padding-inline: 1.25rem;
     margin-inline-start: 0.25rem;
-    cursor: pointer;
 }
 
 .newsletter button:hover {
@@ -711,7 +705,6 @@ ul a {
     font-size: 1.25rem;
     color: var(--clr-accent-400);
     text-decoration: underline;
-    cursor: pointer;
 }
 
 .tips-and-reminders ul > div > *::before {
@@ -757,7 +750,6 @@ ul a {
     color: var(--clr-primary-400);
     max-width: max-content;
     align-self: flex-end;
-    cursor: pointer;
 }
 
 .date-time-modal input {
@@ -766,7 +758,7 @@ ul a {
     padding-inline: 0.5rem;
     margin-block: 0.5rem;
     font-size: 1.5rem;
-    cursor: pointer;
+
     background: transparent;
     border: 0.25rem solid var(--clr-primary-400);
 }
@@ -877,7 +869,6 @@ form p {
     color: var(--clr-neutral-100);
     background-color: var(--clr-neutral-900);
     border: none;
-    cursor: pointer;
 }
 
 .log-in-section button:hover,
@@ -954,18 +945,134 @@ form p {
     background-color: var(--clr-accent-400);
     color: white;
     margin-inline: 0.5rem;
-    cursor: pointer;
 }
 
 .app-cancel {
     color: white;
     background-color: var(--clr-primary-400);
-    cursor: pointer;
 }
 
 .disabled {
     background-color: var(--clr-neutral-300);
     font-weight: normal;
+}
+
+/* Admin dashboard */
+
+.admin-dashboard {
+    padding-block-end: 12rem;
+}
+
+.admin-dashboard *:not(h1, h2, h3),
+.admin-grid-dashboard footer {
+    font-family: var(--ff-sans-serif);
+}
+
+.btn-pill {
+    font-family: var(--ff-sans-serif);
+    display: inline-block;
+    border: none;
+    border-radius: 50vw;
+    padding: 0.5rem 2rem;
+    font-weight: bolder;
+    background-color: var(--clr-neutral-100);
+    color: var(--clr-neutral-900);
+    font-size: 1rem;
+}
+
+.admin-section-header > div {
+    width: 100%;
+    display: flex;
+    align-items: baseline;
+    gap: 0.5rem;
+    justify-content: center;
+    margin-block-start: -1.5rem;
+}
+
+.admin-section-header > p {
+    width: 100%;
+    text-align: center;
+    filter: invert(0.6);
+    margin-block: 1rem;
+}
+
+.admin-section-appointment div {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-block-end: 0.25rem;
+}
+
+.admin-section-appointment h3 {
+    color: var(--clr-primary-400);
+}
+
+.admin-section-appointment > div > div {
+    gap: 0.75rem;
+}
+
+.admin-section-appointment p {
+    font-weight: bold;
+}
+
+.admin-section-appointment > div > p {
+    color: var(--clr-accent-400);
+}
+
+.admin-section-appointment > div:last-of-type {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    margin-block: 1rem;
+}
+
+.admin-section-appointment > div:last-of-type > * {
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1rem;
+    border: none;
+    padding-block: 0.5rem;
+}
+
+.admin-section-appointment > div:last-of-type > span {
+    background-color: var(--clr-neutral-100);
+    color: var(--clr-neutral-900);
+}
+
+.admin-section-appointment > div:last-of-type > button {
+    color: var(--clr-neutral-100);
+    background-color: var(--clr-primary-400);
+}
+
+.view-packages-btn {
+    position: fixed;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: min(calc(100% - 2rem), 58rem);
+
+    display: inline-block;
+    text-align: center;
+    font-size: 1.125rem;
+    background-color: var(--clr-neutral-300);
+    color: var(--clr-neutral-900);
+    text-decoration: none;
+    font-weight: bold;
+    padding-block: 1rem;
+    box-shadow: 0 -1rem 2rem var(--clr-neutral-900),
+        0 5rem 1rem 5rem var(--clr-neutral-900);
+}
+
+.admin-dashboard > a {
+    width: 100%;
+    color: var(--clr-neutral-100);
+    display: inline-block;
+    padding-block: 0.5rem;
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 1.25rem;
 }
 
 /* Media Queries */
