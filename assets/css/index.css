@@ -754,11 +754,17 @@ span[data-downvotes]::before {
     min-height: 100vh;
 }
 
+.log-in-section,
+.sign-up-section {
+    width: clamp(20em, 35vw, 35em);
+    margin-inline: auto;
+}
+
 .sign-up-section h1,
 .log-in-section h1 {
     grid-column: 1/-1;
     text-align: center;
-    font-size: 3.5rem;
+    font-size: 2rem;
     margin-block-end: 1.25rem;
 }
 
@@ -798,7 +804,7 @@ form p {
 
 .form-field input {
     background: none;
-    font-size: 1.75rem;
+    font-size: 1.25rem;
     border: 0.125em solid var(--clr-neutral-900);
     padding: 0.25rem 0.25rem;
 }
@@ -812,7 +818,7 @@ form p {
     font-size: 1.125rem;
     display: inline-block;
     width: 100%;
-    margin-block-start: 0.5rem;
+    margin-block-start: 1rem;
     margin-block-end: 5rem;
     text-transform: uppercase;
     padding: 1.25rem;
