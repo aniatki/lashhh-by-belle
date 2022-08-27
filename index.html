@@ -37,8 +37,11 @@
                         </svg>
                     </label>
                     <ul class="ul-nav-links">
-                        <li><a class="active" href="#">Home</a></li>
-                        <li><a href="#catalogue">Catalogue</a></li>
+                        <li><a class="active" href="#"
+                                onclick="document.querySelector('#menu-toggle').checked = false">Home</a></li>
+                        <li><a href="#catalogue"
+                                onclick="document.querySelector('#menu-toggle').checked = false">Catalogue</a>
+                        </li>
                         <li><a href="#">About</a></li>
                         <li><a href="log-in.html">Log in</a></li>
                     </ul>
@@ -74,13 +77,13 @@
             <div class="carousel snaps-inline">
 
                 <div class="product-container">
-                    <img src="http://picsum.photos/400" alt="Classic Lashes">
+                    <img src="#" alt="Classic Lashes">
                     <p class="price-from">from<br><span>€ 49.99</span></p>
                     <h3 class="product-title">Classic Lashes</h3>
                     <span class="arrow"></span>
                 </div>
                 <div class="product-container">
-                    <img src="http://picsum.photos/404" alt="Classic Lashes">
+                    <img src="#" alt="Classic Lashes">
                     <p class="price-from">from<br><span>€ 49.99</span></p>
                     <h3 class="product-title">Classic Lashes</h3>
                     <span class="arrow"></span>
@@ -161,14 +164,6 @@
             </div>
         </section>
 
-        <section class="newsletter">
-            <label for="newsletter-email">
-                Subscribe to our newest offers and tips.
-            </label>
-            <input type="email" name="newsletter-email" id="newsletter-email" placeholder="email@example.ie">
-            <button type="#">Sign up</button>
-        </section>
-
         <section class="tips-and-reminders">
             <ul class="list-one">
                 <h3>Reminders</h3>
@@ -183,8 +178,8 @@
                 <li>Please try to book your refills in advance. Refills are 2-3 weeks. Anything after 3 weeks is
                     considered a new set.</li>
                 <div>
-                    <span data-upvotes="">&#8776; Agree</span>
-                    <span data-downvotes="">&#8777; Disagree</span>
+                    <span data-upvotes="105">&#8776; Agree</span>
+                    <span data-downvotes="0">&#8777; Disagree</span>
                 </div>
             </ul>
             <ul class="list-two">
@@ -199,8 +194,8 @@
                         href="https://www.salon-services.com/ie/blogs/article?cid=All-you-need-to-know-about-patch-tests-and-strand-tests-for-your-hair-and-beauty-clients&fdid=blog">24
                         hour patch test</a> required for first time clients.</li>
                 <div>
-                    <span data-upvotes="">&#8776; Agree</span>
-                    <span data-downvotes="">&#8777; Disagree</span>
+                    <span data-upvotes="105">&#8776; Agree</span>
+                    <span data-downvotes="50">&#8777; Disagree</span>
                 </div>
             </ul>
             <ul class="list-three">
@@ -217,8 +212,8 @@
                 <li>Never pull or rub lashes.</li>
                 <li>Always get lashes removed professsionally.</li>
                 <div>
-                    <span data-upvotes="">&#8776; Agree</span>
-                    <span data-downvotes="">&#8777; Disagree</span>
+                    <span data-upvotes="105">&#8776; Agree</span>
+                    <span data-downvotes="50">&#8777; Disagree</span>
                 </div>
             </ul>
         </section>
