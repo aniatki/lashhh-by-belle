@@ -30,15 +30,15 @@ itemsFromLocalStorage.forEach((dateFrom) => {
             <span class="details app-number accent"></span>
         </div>
         <p class="package">
+            Full eyelash treatment with classic extensions.
         </p>
     
         <div class="app-buttons">
-            <span class="app-price"></span>
+            <span class="app-price">49 99</span>
             <button class="app-book">Book again</button>
             <button class="app-cancel">Cancel</button>
         </div>
     </div>
     `
-
     main.innerHTML += appItem
 })
