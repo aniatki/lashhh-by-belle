@@ -795,7 +795,7 @@ form p {
 }
 
 .form-field label {
-    color: var(--clr-neutral-900);
+    color: var(--clr-neutral-100);
     font-weight: bold;
     font-size: 1.25rem;
     margin-block: 1rem;
@@ -814,7 +814,8 @@ form p {
 .form-field input {
     background: none;
     font-size: 1.25rem;
-    border: 0.125em solid var(--clr-neutral-900);
+    color: var(--clr-neutral-100);
+    border: 0.125em solid var(--clr-neutral-100);
     padding: 0.25rem 0.25rem;
 }
 
@@ -832,8 +833,8 @@ form p {
     text-transform: uppercase;
     padding: 1.25rem;
     font-weight: bold;
-    color: var(--clr-neutral-100);
-    background-color: var(--clr-neutral-900);
+    color: var(--clr-neutral-900);
+    background-color: var(--clr-neutral-100);
     border: none;
 }
 

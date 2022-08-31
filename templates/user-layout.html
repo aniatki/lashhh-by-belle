@@ -18,7 +18,7 @@
 
     <script src="{{ '../static/scripts/color-theme.js' }}" defer></script>
 
-    <title>Lashhh by Belle | Lash Extensions</title>
+    <title>Lashhh by Belle | {{ title }}</title>
 </head>
 
 <body>
@@ -39,7 +39,7 @@
             </div>
 
             <div class="right-side-menu">
-                <a href="sign-up.html" class="sign-up">Sign Up</a>
+                <a href="#" class="sign-up">Sign Up</a>
                 <div class="hamburger-menu">
                     <input type="checkbox" name="menu-toggle" id="menu-toggle">
                     <label for="menu-toggle">
@@ -54,7 +54,7 @@
                                 onclick="document.querySelector('#menu-toggle').checked = false">Catalogue</a>
                         </li>
                         <li><a href="#">About</a></li>
-                        <li><a href="log-in.html">Log in</a></li>
+                        <li><a href="{{url_for('log_in')}}">Log in</a></li>
 
                     </ul>
                 </div>

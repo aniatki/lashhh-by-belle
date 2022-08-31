@@ -6,13 +6,13 @@ app = Flask(__name__)
 # Index
 @app.route('/')
 def index():
-    return render_template('index.html')
+    return render_template('index.html', title="Lash Extensions")
 
 
 # Log in
-# @app.route('/log-in')
-# def log_in():
-#     return render_template('log-in.html')
+@app.route('/log-in')
+def log_in():
+    return render_template('log-in.html', title="Log In")
 
 
 # Sign up

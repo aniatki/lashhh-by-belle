@@ -1,0 +1,24 @@
+{% extends "user-layout.html" %}
+
+{% block body %}
+
+<main class="log-in-section">
+    <h1>Log in</h1>
+    <form action="" method="POST">
+        <div class="form-field">
+            <label for="email">
+                E-mail:
+            </label>
+            <input type="email" name="email" id="email">
+        </div>
+        <div class="form-field">
+            <label for="password">
+                Password:
+            </label>
+            <input type="password" name="password" id="password">
+        </div>
+        <button type="submit">Log in</button>
+    </form>
+</main>
+
+{% endblock %}
