@@ -1,11 +1,4 @@
 :root {
-    --clr-neutral-100: hsla(32, 16%, 94%, 1);
-    --clr-neutral-100-alpha: hsla(32, 16%, 94%, 0.5);
-    --clr-neutral-300: hsla(348, 41%, 92%, 1);
-    --clr-primary-400: hsla(335, 100%, 55%, 1);
-    --clr-accent-400: hsla(270, 93%, 59%, 1);
-    --clr-neutral-900: hsl(348, 10%, 20%);
-
     --ff-serif: "Playfair Display", serif;
     --ff-sans-serif: "Mukta", sans-serif;
     --ff-script: "Parisienne", cursive;
@@ -166,6 +159,22 @@ header,
     font-family: var(--ff-script);
     color: var(--clr-primary-400);
     font-size: calc(var(--logo-sizer) * 4.25);
+}
+
+/* Theme picker */
+
+.theme {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+.theme > * {
+    background: none;
+    color: var(--clr-neutral-100);
+    text-decoration: underline;
+    border: none;
+    display: inline-block;
 }
 
 /* sign up button */
