@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;1,600&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Parisienne&display=swap" rel="stylesheet">
+
+    <link id="theme-link" rel="stylesheet" href="{{ 'static/css/theme-two.css' }}">
+    <link rel=" stylesheet" href="{{'static/css/index.css'}}">
+
+    <script src="{{ '../static/scripts/color-theme.js' }}" defer></script>
+
+    <title>Lashhh by Belle | Lash Extensions</title>
+</head>
+
+<body>
+    <div class="grid-container">
+        <header>
+            <div class="logo">
+                <span class="lashhh">Lashhh</span>
+                <span class="by">by</span>
+                <span class="belle">Belle</span>
+            </div>
+
+            <div class="theme">
+                <button data-href="one">Pale</button>
+                <button data-href="two">Default</button>
+                <button data-href="three">Fluorescent</button>
+                <button data-href="four">Muted</button>
+                <button data-href="five">Light</button>
+            </div>
+
+            <div class="right-side-menu">
+                <a href="sign-up.html" class="sign-up">Sign Up</a>
+                <div class="hamburger-menu">
+                    <input type="checkbox" name="menu-toggle" id="menu-toggle">
+                    <label for="menu-toggle">
+                        <svg viewBox="0 0 30 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0 20H20V16.6667H0V20ZM0 0V3.33333H30V0H0ZM0 11.6667H30V8.33333H0V11.6667Z" />
+                        </svg>
+                    </label>
+                    <ul class="ul-nav-links">
+                        <li><a class="active" href="#"
+                                onclick="document.querySelector('#menu-toggle').checked = false">Home</a></li>
+                        <li><a href="#catalogue"
+                                onclick="document.querySelector('#menu-toggle').checked = false">Catalogue</a>
+                        </li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="log-in.html">Log in</a></li>
+
+                    </ul>
+                </div>
+            </div>
+        </header>
+
+        {% block body %}
+
+        {% endblock %}
+
+        <footer class="footer-section">
+
+        </footer>
+    </div>
+
+
+</body>
+
+</html>
