@@ -1,0 +1,28 @@
+{% extends "user-layout.html" %}
+
+{% block body %}
+<main class="dashboard-main">
+    <div class="dashboard-user-container">
+        <h2 class="user">Kayleigh</h2>
+        <p>Your upcoming appointments are shown here.</p>
+    </div>
+    <div class="app-item">
+        <div class="appointment">
+            <span class="details app-date">17 October</span>
+            <span class="details app-time">14:30</span>
+            <span class="details app-length">1 hour</span>
+            <span class="details app-number accent">#4307</span>
+        </div>
+        <p class="package">
+            Full eyelash treatment with classic extensions.
+        </p>
+
+        <div class="app-buttons">
+            <span class="app-price">€ 49.99</span>
+            <button class="app-book">Book again</button>
+            <button class="app-cancel">Cancel</button>
+        </div>
+    </div>
+
+</main>
+{% endblock %}

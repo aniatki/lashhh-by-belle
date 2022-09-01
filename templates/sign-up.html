@@ -1,0 +1,39 @@
+{% extends "user-layout.html" %}
+
+{% block body %}
+
+<main class="sign-up-section">
+    <h1>Sign up</h1>
+
+    <form action="" method="POST">
+        <div class="form-field">
+            <label for="full-name">
+                Full name:
+            </label>
+            <input type="text" name="full-name" id="full-name">
+        </div>
+        <div class="form-field">
+            <label for="email">
+                E-mail:
+            </label>
+            <input type="email" name="email" id="email">
+        </div>
+        <div class="form-field">
+            <label for="password">
+                Password:
+                <span>
+                    Must be longer than 8 characters and include at least one uppercase and one lowercase
+                    letter.
+                </span>
+            </label>
+            <input type="password" name="password" id="password">
+        </div>
+        <p>
+            By signing up for an account, you agree to our <span class="accent">terms and conditions</span>. The
+            information from this form is 100% compliant with European Union's GDPR rules.
+        </p>
+        <button type="submit">Confirm</button>
+    </form>
+
+</main>
+{% endblock %}

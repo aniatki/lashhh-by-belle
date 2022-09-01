@@ -16,27 +16,27 @@ def log_in():
 
 
 # Sign up
-# @app.route('/sign-up')
-# def sign_up():
-#     return render_template('sign-up.html')
-
-
-# Admin-dashboard
-# @app.route('/admin-dashboard')
-# def admin_dashboard():
-#     return render_template('admin-dashboard.html')
-
-
-# Admin-packages
-# @app.route('/admin-packages')
-# def admin_packages():
-#     return render_template('admin-packages.html')
+@app.route('/sign-up')
+def sign_up():
+    return render_template('sign-up.html', title="Sign Up")
 
 
 # User-dashboard
-# @app.route('/user-dashboard')
-# def user_dashboard():
-#     return render_template('user-dashboard.html')
+@app.route('/user-dashboard')
+def user_dashboard():
+    return render_template('user-dashboard.html', title="Dashboard")
+
+
+# Admin-dashboard
+@app.route('/admin-dashboard')
+def admin_dashboard():
+    return render_template('admin-dashboard.html', title="Dashboard")
+
+
+# Admin-packages
+@app.route('/admin-packages')
+def admin_packages():
+    return render_template('admin-packages.html', title="View Packages")
 
 
 if __name__ == '__main__':

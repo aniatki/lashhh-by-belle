@@ -1,8 +1,8 @@
 :root {
-    --clr-neutral-100: hsla(24, 16%, 6%, 1);
+    --clr-neutral-100: rgb(27, 23, 20);
     --clr-neutral-100-alpha: hsla(var(--clr-neutral-100), 0.5);
-    --clr-neutral-300: hsla(349, 40%, 8%, 1);
-    --clr-primary-400: hsla(335, 100%, 55%, 1);
-    --clr-accent-400: hsla(270, 93%, 59%, 1);
-    --clr-neutral-900: hsla(348, 10%, 90%, 1);
+    --clr-neutral-300: hsl(349, 41%, 15%);
+    --clr-primary-400: hsl(335, 100%, 55%);
+    --clr-accent-400: hsl(270, 93%, 59%);
+    --clr-neutral-900: hsl(348, 10%, 90%);
 }

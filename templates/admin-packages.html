@@ -1,0 +1,57 @@
+{% extends "admin-layout.html" %}
+
+{% block body %}
+
+<main class="admin-dashboard">
+    <section class="admin-section-header">
+        <div>
+            <h1>Admin</h1>
+            <p>logged in as User.</p>
+        </div>
+        <p>All your active packages will appear listed below.</p>
+    </section>
+
+    <article class="admin-section-appointment package">
+        <div>
+            <h3>Classic Lashes</h3>
+            <p>#0001</p>
+        </div>
+        <p>
+            There are many variations of passages of Lorem Ipsum available, but the majority have suffered
+            alteration in some form, by injected humour, or randomised words which don't look even slightly
+            believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't
+            anything embarrassing hidden in the middle of text.
+        </p>
+
+        <div class="detail-grid">
+            <div>
+                <span>Length (1-10):</span>
+                <span>4</span>
+            </div>
+            <div>
+                <span>Timeframe (1-10):</span>
+                <span>2</span>
+            </div>
+            <div>
+                <span>Thickness (1-10):</span>
+                <span>6</span>
+            </div>
+            <div>
+                <span>Endurance (1-10):</span>
+                <span>7</span>
+            </div>
+        </div>
+
+        <div>
+            <span>e 49.99</span>
+            <button>Edit Package</button>
+            <button>Delete Package</button>
+        </div>
+    </article>
+
+    <a href="#" target="_top">Back to top &uarr;</a>
+</main>
+<footer>
+</footer>
+
+{% endblock %}

@@ -14,15 +14,16 @@
     <link href="https://fonts.googleapis.com/css2?family=Parisienne&display=swap" rel="stylesheet">
 
     <link id="theme-link" rel="stylesheet" href="{{ 'static/css/theme-two.css' }}">
-    <link rel="stylesheet" href="{{'static/css/index.css'}}">
+    <link rel="stylesheet" href="{{ 'static/css/index.css' }}">
 
     <script src="{{ '../static/scripts/color-theme.js' }}" defer></script>
+    <script src="{{'../static/scripts/user-dashboard.js'}}" defer></script>
 
     <title>Lashhh by Belle | {{ title }}</title>
 </head>
 
 <body>
-    <div class="grid-container">
+    <div class="grid-container admin-grid-dashboard">
         <header>
             <div class="logo">
                 <span class="lashhh">Lashhh</span>
@@ -38,39 +39,16 @@
                 <button data-href="five">Light</button>
             </div>
 
-            <div class="right-side-menu">
-                <a href="{{url_for('sign_up')}}" class="sign-up">Sign Up</a>
-                <div class="hamburger-menu">
-                    <input type="checkbox" name="menu-toggle" id="menu-toggle">
-                    <label for="menu-toggle">
-                        <svg viewBox="0 0 30 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M0 20H20V16.6667H0V20ZM0 0V3.33333H30V0H0ZM0 11.6667H30V8.33333H0V11.6667Z" />
-                        </svg>
-                    </label>
-                    <ul class="ul-nav-links">
-                        <li><a class="active" href="#"
-                                onclick="document.querySelector('#menu-toggle').checked = false">Home</a></li>
-                        <li><a href="/#catalogue"
-                                onclick="document.querySelector('#menu-toggle').checked = false">Catalogue</a>
-                        </li>
-                        <li><a href="#">About</a></li>
-                        <li><a href="{{url_for('log_in')}}">Log in</a></li>
-
-                    </ul>
-                </div>
-            </div>
+            <a href="{{url_for('log_in')}}" class="btn-pill">
+                Log out &#10138;
+            </a>
         </header>
 
         {% block body %}
 
         {% endblock %}
 
-        <footer class="footer-section">
-
-        </footer>
     </div>
-
-
 </body>
 
 </html>
